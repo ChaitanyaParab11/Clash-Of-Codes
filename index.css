@@ -1,0 +1,54 @@
+.navbar{
+    z-index: 1 !important;
+    position: absolute;
+    
+}
+*{
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+
+#human{
+    /* width: 40%; */
+    text-align: center;
+    position: absolute;
+    left: 145px;
+    top: 100px;
+    width: 500px;
+}
+    
+
+#home{
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0%;
+    margin-left: 100px;
+}
+#abtus{
+    margin-left: 40px;
+}
+#texton{
+    font-size: 6.5rem;
+    margin-left: 700px;
+    padding: 10px;
+}
+#check{
+    /* font-size: 6.5rem; */
+    margin-left: 100px;
+    /* padding: 10px; */
+}
+#upload{
+    align-items: center;
+    position: relative;
+    /* display: block; */
+    margin-top: 100px;
+}
+#blog{
+    font-weight: 500;
+    font-size: larger;
+    position: relative;
+    margin-top: 10px;
+
+}
+/* about */
