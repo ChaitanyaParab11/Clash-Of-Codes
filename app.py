@@ -3,6 +3,7 @@ from flask import Flask, request, render_template, jsonify
 from probability import *
 from download import *
 from detect_faces import *
+from detect_gender import *
 
 app = Flask(__name__)
 
@@ -21,16 +22,16 @@ def run_python_function():
         return jsonify(result='Error: ' + str(e))
 
 def check_images(url):
+    print(url)
     try:
         image_path = url_to_image(url)
         probab = probability(image_path)
+        gender = detect_gender(image_path)
         presence = detect_face(image_path)
         if presence:
-            return f'There is {probab} probability images on this page.' + \
-                'There is face present.'
+            return f"There is {probab}% probability of presence of images on this page.\nThere is {gender}'s face present."
         else:
-            return f'There is {probab} probability images on this page.' + \
-                'There is no face present.'
+            return f"There is {probab}% probability of presence of images on this page.There is no face present."
     except Exception as e:
         print(e)
         return 'Error: ' + str(e)

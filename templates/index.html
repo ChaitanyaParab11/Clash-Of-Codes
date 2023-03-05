@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <!-- spinner -->
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <!--  -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">virtuosos</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="home" href="#">Home</a>
+              </li>
+              <!-- <li class="nav-item" id="abtus">
+                <a class="nav-link active" aria-current="page" href="#">Aboutus</a>
+              </li> -->
+              <li class="nav-item" id="check">
+                <a class="nav-link active" aria-current="page" href="#upload"> Check me </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<br>
+    <div class="container" >
+      <img src="{{ url_for('static', filename='img/proicon.png') }}" alt="human" id="human">
+</div>
+<br>
+<br>
+<br>
+<h1 id="texton">wanna check probability of profile being Fake?</h1>
+<!-- blog -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container" id="blog">
+
+<p>
+
+  <h3>Fake profile scams are a  type of online fraud that involves the creation of fake online profiles with the aim of deceiving unsuspecting victims. </h3>
+  These scams have become increasingly common in recent years as more and more people use social media platforms and online dating apps.
+
+    In fake profile scams, fraudsters create a false identity on social media or dating websites, often using stolen or manipulated photos and personal information.
+    They then use these fake profiles to engage in conversations with their victims, building trust and often establishing romantic or emotional connections. Once they have gained their victims' trust, they will typically ask for money or personal information, which they will then use for fraudulent purposes such as identity theft or financial fraud.
+    <br>
+    Fake profile scams can take many  different forms, ranging from romance scams in which fraudsters pretend to be interested in a romantic relationship, to job scams in which they pose as recruiters or employers offering false job opportunities. In some cases, fake profiles may be used to spread misinformation or propaganda for political or other purposes.
+
+</p>
+
+</div>
+<!-- input file -->
+
+<div class="container" id="upload">
+    <h1>JUST ENTER LINK AND FIND OUT</h1>
+<div class="input-group-lg  align-items-end" >
+    <div class="input-group-prepend">
+      <span class="input-group-text">Upload</span>
+    </div>
+    <br>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputGroupFile01">
+        <br> 
+        <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label> -->
+      </div>
+    </div>
+    <!--  -->
+<br>
+<br>
+    <form>
+        <label for="url" type="button" class="btn btn-dark" >Enter URL:</label>
+        <input type="url" id="url" name="url" value="https://" required>
+        <button onclick="runPythonFunction()" type="button" class="btn-dark">Submit</button>
+
+      </form>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+<script src="index.js"></script>
+</html>
