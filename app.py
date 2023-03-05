@@ -29,9 +29,9 @@ def check_images(url):
         gender = detect_gender(image_path)
         presence = detect_face(image_path)
         if presence:
-            return f"There is {probab}% probability of presence of images on this page.\nThere is {gender}'s face present."
+            return f"There is {probab}% probability of presence of face in images on this page.\nThere is {gender}'s face present."
         else:
-            return f"There is {probab}% probability of presence of images on this page.There is no face present."
+            return f"There is {probab}% probability of presence of images on this page.\nThere is no face present."
     except Exception as e:
         print(e)
         return 'Error: ' + str(e)

@@ -23,7 +23,12 @@ def probability(imgpath):
         # calculate probability by counting non-zero pixels in the grayscale ROI
         face_prob = cv2.countNonZero(roi_gray) / (roi_gray.shape[0] * roi_gray.shape[1])
         face_probs.append(face_prob)
-        final_probab = int(face_prob*100)
 
-    # print out the probabilities of having a face
+    # calculate the final probability as the maximum probability in the face_probs array
+    if len(face_probs) > 0:
+        final_probab = int(max(face_probs) * 100)
+    else:
+        final_probab = 0
+
+    # return the final probability
     return final_probab
